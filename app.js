@@ -44,7 +44,7 @@ switch (currentDay){
   break;
 
   default:
-  console.log("Err! No match in switch!");
+  console.log("Err! No match in switch, your current day is" + currentDay);
 }
 
   res.render("list", {kindOfDay: day});
