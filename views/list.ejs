@@ -6,11 +6,25 @@
 </head>
 <body>
 
-  <% if (kindOfDay === "Saturday" || kindOfDay === "Sunday") { %>
-  <h1 style = "color: red"><%= kindOfDay %> To Do List</h1>
-  <% } else { %>
-  <h1 style = "color: blue"><%= kindOfDay %> To Do List</h1>
-  <% } %>
+<h1><%= kindOfDay %></h1>
+
+<ul>
+  <li>Buy Food</li>
+  <li>Cool Food</li>
+  <li>Eat Food</li>
+
+  <%for (var i = 0; i < newListItems.length; i++) { %>
+  <li><%=newListItems[i]%></li>
+  <%}%>
+</ul>
+
+
+<form class="" action="/" method="post">
+<input type="text" name="newListItems" value="" onload="reset">
+<button type="submit" name="button">Add Task</button>
+
+</form>
+
 </body>
 
 </html>
