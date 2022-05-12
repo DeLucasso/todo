@@ -37,6 +37,7 @@ let workItems = [];
 app.post("/", function (req, res) {
 
   let item = req.body.newListItems;
+
   if (req.body.list === "Work"){
     workItems.push(item);
     res.redirect("/work");
@@ -51,11 +52,13 @@ console.log("Now the array items contains: " + items);
 // APP POST  ------------------------- END
 
 // APP GET -------------------------  START
-app.get("/work", function (req, res) {
+app.get("/work", function(req,res) {
   res.render("list", {listTitle: "Work List", newListItems: workItems});
 });
+// APP GET ------------------------- END
 
-app.post("/work", function (req, res) {
+// APP POST -------------------------  START
+app.post("/work", function(req,res) {
 let item = req.body.newItem;
 workItems.push(item);
 res.redirect("/work");
@@ -64,4 +67,8 @@ res.redirect("/work");
   app.listen(3000, function() {
     console.log("Server started on port 3000");
   });
-// APP GET ------------------------- END
+  // APP POST  ------------------------- END
+
+  app.get("/about", function(req, res) {
+    res.render("about");
+  });
