@@ -21,6 +21,7 @@ h1 {
 #heading {
   background-color: #A683E3;
   text-align: center;
+  font-size: 0.7em;
 }
 
 .item {
@@ -93,4 +94,10 @@ footer {
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
+}
+
+.menu {
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
 }
